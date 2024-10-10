@@ -35,7 +35,7 @@ jobs:
     # Update the Kubernetes manifests to use the new image tag
     - name: Update Kubernetes manifests
       run: |
-        sed -i 's|${{ secrets.DOCKERHUBUSER }}/todoapp:.*|${{ secrets.DOCKERHUBUSER }}/todoapp:${{ github.sha }}|' ToDoApp-K8S-Manifests/todo-deployment.yaml
+        sed -i 's|${{ secrets.DOCKERHUBUSER }}/todoapp:.*|${{ secrets.DOCKERHUBUSER }}/todoapp:${{ github.sha }}|' ToDoApp-K8S-Manifests/todo-deployment.yml
 
     # Commit and push the updated manifests back to the repository
     - name: Commit and push updated manifests
