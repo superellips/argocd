@@ -36,6 +36,7 @@ jobs:
     - name: Update Kubernetes manifests
       run: |
         sed -i 's|${{ secrets.DOCKERHUBUSER }}/todoapp:.*|${{ secrets.DOCKERHUBUSER }}/todoapp:${{ github.sha }}|' ToDoApp-K8S-Manifests/todo-deployment.yml
+        cat ToDoApp-K8S-Manifests/todo-deployment.yml
 
     # Commit and push the updated manifests back to the repository
     - name: Commit and push updated manifests
