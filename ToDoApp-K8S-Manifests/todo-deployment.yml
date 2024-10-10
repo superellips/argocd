@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: todo-container
-        image: stjarnstoft/todoapp:a9d82727bd8b244397c4c6ac1f07bbe572903f73
+        image: stjarnstoft/todoapp:7f977e157c4f88ef2b40d17776e39d2ab961a8ed
         ports:
         - containerPort: 80
         envFrom: 
